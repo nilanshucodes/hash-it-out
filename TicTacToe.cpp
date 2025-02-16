@@ -13,7 +13,7 @@ int main()
     char computer = 'O';
     bool running = true;
 
-    drawBoard(spaces);
+    drawBoard(spaces);//when we pass array to function it decays into pointe so no need to add asterik here
 
     while(running){
         playerMove(spaces, player);
@@ -44,9 +44,9 @@ int main()
 }
 void drawBoard(char *spaces){
     std::cout << '\n';
-    std::cout << "     |     |     " << '\n';
+    std::cout << "     |     |     " << '\n'; // 5 spaces then |
     std::cout << "  " << spaces[0] << "  |  " << spaces[1] << "  |  " << spaces[2] << "  " << '\n';
-    std::cout << "_____|_____|_____" << '\n';
+    std::cout << "_____|_____|_____" << '\n';// hprizontal bar 
     std::cout << "     |     |     " << '\n';
     std::cout << "  " << spaces[3] << "  |  " << spaces[4] << "  |  " << spaces[5] << "  " << '\n';
     std::cout << "_____|_____|_____" << '\n';
